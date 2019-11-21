@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mounder — самый большой файловый архив</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="preloader" class="preloader">
+		<div class="loader-wrapper">
+			<div class="loader">
+			    <svg viewBox="0 0 80 80">
+			        <circle id="test" cx="40" cy="40" r="32"></circle>
+			    </svg>
+			</div>
+			<div class="loader triangle">
+			    <svg viewBox="0 0 86 80">
+			        <polygon points="43 8 79 72 7 72"></polygon>
+			    </svg>
+			</div>
+			<div class="loader">
+			    <svg viewBox="0 0 80 80">
+			        <rect x="8" y="8" width="64" height="64"></rect>
+			    </svg>
+			</div>
+		</div>	
+	</div>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="header-nav d-flex">
+				<div class="header-nav-left">
+					<div class="header-nav__logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="logo" class="logo">
+						</a>
+					</div>
+					<!-- Бургер-меню -->
+					<div class="burger-menu-wrapper">
+						<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+						  <path
+						        class="line top"
+						        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+						  <path
+						        class="line middle"
+						        d="m 30,50 h 40" />
+						  <path
+						        class="line bottom"
+						        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+						</svg>
+					</div>
+					<!-- К.Бургер-меню -->
+					<div class="header-nav__menu">
+						<nav>
+							<ul class="menu d-flex">
+								<li id="menu__item_01" class="menu__item">
+									<a href="#" class="menu__link">
+										Фильмы
+									</a>
+								</li>
+								<li id="menu__item_02" class="menu__item">
+									<a href="#" class="menu__link">
+										Сериалы
+									</a>
+								</li>
+								<li id="menu__item_03" class="menu__item">
+									<a href="#" class="menu__link">
+										Музыка
+									</a>
+								</li>
+								<li id="menu__item_04" class="menu__item">
+									<a href="#" class="menu__link">
+										Софт
+									</a>
+								</li>
+								<li id="menu__item_05" class="menu__item">
+									<a href="#" class="menu__link">
+										Игры
+									</a>
+								</li>
+								<li id="menu__item_06" class="menu__item">
+									<a href="#" class="menu__link">
+										Книги
+									</a>
+								</li>
+								<li id="menu__item_07" class="menu__item">
+									<a href="#" class="menu__link">
+										Документы
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="header-nav__account d-flex">
+					<button id="like-anim" class="like">
+						<img src="img/header-icon.png" alt="evaluation">
+					</button>
+					<button id="auth-anim" class="auth">Вход</button>
+					<button id="reg-anim" class="reg">Регистрация</button>
+					<img id="age-limit-anim" src="img/age-limit-icon.png" alt="18+">
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-wrapper">
+							<ul class="mobile-menu">
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Фильмы
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Сериалы
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Музыка
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Софт
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Игры
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Книги
+									</a>
+								</li>
+								<li class="mobile-menu__item">
+									<a href="#" class="mobile-menu__link">
+										Документы
+									</a>
+								</li>
+							</ul>
+					</div>
+	</header>
+	<section id="search" class="search">
+		<div class="container">
+			<div class="offer-wrapper d-flex">
+				<div class="offer-wrapper__left">
+					<div class="offer__title">
+						<h1 id="offer-title_anim" class="gradient-text">
+							Самый большой <br>
+							файловый архив
+						</h1>
+						<p id="offer-text_anim">
+							Cкачивайте любые фильмы, документы, музыку, игры, книги, <br>
+							и многое другое абсолютно бесплатно!
+						</p>
+					</div>
+					<div id="search_anim" class="search-wrapper">
+						<div class="search-wrapper__wrapp d-flex">
+							<div class="search-wrapper__input">
+								<img src="img/search-icon.png" alt="search">
+								<input type="text" name="search" placeholder="Более 1 244 382 фильмов, игр, музыки и других файлов">
+							</div>
+							<button id="search-object_anim" class="search-object">
+								Найти
+							</button>
+						</div>
+						<div class="checkbox-list">
+						    <div class="checkbox-list__item">
+						    	<input id="check1" type="checkbox" name="check" value="check1">
+							    <label for="check1">
+							    	Музыка
+							    </label>
+						    </div>
+						    <div class="checkbox-list__item">
+						    	<input id="check2" type="checkbox" name="check2" value="check2">
+							    <label for="check2">
+							    	Софт
+							    </label>
+						    </div>
+						    <div class="checkbox-list__item">
+						    	<input id="check3" type="checkbox" name="check3" value="check3">
+							    <label for="check3">
+							    	Игры
+							    </label>
+						    </div>
+						    <div class="checkbox-list__item">
+						    	<input id="check4" type="checkbox" name="check4" value="check4">
+							    <label for="check4">
+							    	Документы
+							    </label>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="offer-wrapper__right">
+					<div class="cosmonaut-wrapper">
+						<div id="scene" class="treug">
+							<img data-depth="0.4" src="img/treug.png" alt="#">
+							<img data-depth="-.7" data-invert-x="true" src="img/cosmonaut.png" alt="#" class="cosmonaut">
+							<img data-depth="-0.2" src="img/offer-particles.png" alt="#" class="particles">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="proposal" class="proposal">
+		<div class="container">
+			<div class="proposal-bg-effects">
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par1">
+					<img src="img/particles-icon1.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par2">
+					<img src="img/particles-icon2.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par3">
+					<img src="img/particles-icon3.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par4">
+					<img src="img/particles-icon4.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par5">
+					<img src="img/particles-icon5.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par6">
+					<img src="img/particles-icon4.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par7">
+					<img src="img/particles-icon2.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par8">
+					<img src="img/particles-icon6.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par9">
+					<img src="img/particles-icon1.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par10">
+					<img src="img/particles-icon4.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par11">
+					<img src="img/particles-icon6.png" alt="effects">
+				</div>
+				<div data-aos="fade-in" data-aos-delay="500" class="proposal-bg-effects__item par12">
+					<img src="img/particles-icon2.png" alt="effects">
+				</div>
+				<div data-aos="fade-in"data-aos-delay="500" class="proposal-bg-effects__item par13">
+					<img src="img/particles-icon4.png" alt="effects">
+				</div>
+			</div>
+			<h1 data-aos="fade-zoom-in"
+    			data-aos-easing="ease-in-back"
+    			data-aos-delay="500"
+    			data-aos-offset="0" 
+    			class="gradient-text proposal-title">
+				Что мы предлагаем
+			</h1>
+			<p  data-aos="fade-zoom-in"
+    			data-aos-easing="ease-in-back"
+    			data-aos-delay="500"
+    			data-aos-offset="0"  
+    			class="proposal-text">
+				Наш сервис предоставляет +1.000.000 файлов различных категорий без вирусов. <br> Также вас порадуют такие аспекты как...
+			</p>
+			<div  class="proposal-list">
+				<div data-aos="zoom-in-up" data-aos-delay="1000" class="proposal-list__item">
+					<img src="img/proposal-icon1.png" alt="Постоянные обновления">
+					<h2>Постоянные <br> обновления</h2>
+					<p>
+						Наш серсис постоянно совершенствуется. Мы стараемся выпускать различного рода плюшки для вашего удобства и комфортного времяпровождения здесь.
+					</p>
+				</div>
+				<div data-aos="zoom-in-up" data-aos-delay="1500" class="proposal-list__item">
+					<img src="img/proposal-icon2.png" alt="Постоянные обновления">
+					<h2>Высокая <br> скорость <br> скачиавния</h2>
+					<p>
+						Мы гарантируем ультра-высокую скорость скачивания файлов с нашего ресурса. Наши специалисты постарались на славу для обеспечения такого счастья!
+					</p>
+				</div>
+				<div data-aos="zoom-in-up" data-aos-delay="2000" class="proposal-list__item">
+					<img src="img/proposal-icon3.png" alt="Постоянные обновления">
+					<h2>Отсутствие <br> рекламы</h2>
+					<p>
+						Так как у нас имеется стабильный доход, вы не увидите рекламы не на этом сайте, не в файлах при скачивании.
+					</p>
+				</div>
+				<div data-aos="zoom-in-up" data-aos-delay="2500" class="proposal-list__item">
+					<img src="img/proposal-icon4.png" alt="Постоянные обновления">
+					<h2>Круглосуточная <br>  поддержка</h2>
+					<p>
+						Наши консультанты готовы ответить на любой интересующий вас вопрос. Пишите в любое время дня и ночи - вам помогут!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="popular-files" class="popular-files">
+		<div class="container">
+			<h1 class="gradient-text proposal-title">
+				Самые популярные файлы
+			</h1>
+			<p class="proposal-text">
+				В этом разделе собраны самые популярные по скачиванию <br>
+				файлы за последние 2 года. Здесь вы найдёте что-то для своей души.
+			</p>
+			<div class="popular-files-list">
+				<div class="popular-files-list__item">
+					<img src="img/files-icon1.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Viasat Explore: Как <br>
+							работают лайфхаки / <br>
+							How Hacks...
+						</h3>
+						<a href="#">Документы, софт</a>
+						<p>12 Гб / 3.23 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon2.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Одинокий папа <br>
+							мечтает <br>
+							познакомиться ( 2019 )
+						</h3>
+						<a href="#">Фильмы, сериалы</a>
+						<p>110 Мб / 2.93 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon3.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Подсознание может <br>
+							всё. <br>
+							Джон Кехо
+						</h3>
+						<a href="#">Книги</a>
+						<p>34 Мб / 1.52 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon4.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Территория <br>
+							заблуждений с <br>
+							Игорем Прокопенко
+						</h3>
+						<a href="#">Музыка</a>
+						<p>982 Мб / 5.18 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon5.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Fences - группировка <br>
+							иконок рабочего <br>
+							стола
+						</h3>
+						<a href="#">Документы, Софт</a>
+						<p>428 Мб / 2.25 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon6.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Grey Hack - <br>
+							version 0.4 <br>
+							+ русификатор
+						</h3>
+						<a href="#">Игры</a>
+						<p>52 Мб / 2.98 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon7.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Рисовый штурм <br>
+							или 21 способ <br>
+							мыслить нестардантно
+						</h3>
+						<a href="#">Книги</a>
+						<p>14 Мб / 1.59 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon8.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							BlackStarMafia - <br>
+							ракета. <br>
+							Премьера клипа
+						</h3>
+						<a href="#">Музыка</a>
+						<p>62 Мб / 1.18 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon9.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Game of Thrones: <br>
+							( 1 Cезон ) <br>
+							Русская озвучка
+						</h3>
+						<a href="#">Фильмы, сериалы</a>
+						<p>17 Гб / 2.47 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon10.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Counter-Strike <br>
+							Global Offiensive <br>
+							v. 1.4
+						</h3>
+						<a href="#">Игры</a>
+						<p>62 Мб / 1.18 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon11.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Wayup - <br>
+							Почему фриланс = <br>
+							счастливая жизнь
+						</h3>
+						<a href="#">Сериалы</a>
+						<p>62 Мб / 1.18 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+				<div class="popular-files-list__item">
+					<img src="img/files-icon12.png" alt="image">
+					<div class="popular-files-list__info">
+						<h3>
+							Почему отличники <br>
+							работают <br>
+							на троечников
+						</h3>
+						<a href="#">Книги</a>
+						<p>12 Мб / 1.64 Mb/s</p>
+					</div>
+					<button class="download">Скачать</button>
+				</div>
+			</div>
+			<button data-aos="fade-up"
+     				data-aos-anchor-placement="bottom-bottom" 
+     				data-aos-delay="1000" class="showMore">
+				Показать ещё
+			</button>
+		</div>
+	</section>
+	<section id="partners" class="partners">
+		<div class="container">
+			<h1 data-aos="fade-in"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="1000" class="partners-title">
+				Партнеры
+			</h1>
+			<p data-aos="fade-in"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="1000" class="proposal-text partners-text">
+				Мы сотрудничаем с множеством мировых гигантов в сфере бизнеса. <br> Здесь отображены лучшие из лучших.
+			</p>
+			<div class="partners-list d-flex">
+				<div data-aos="flip-up"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="1000" class="proposal-text partners-text"  class="partners-list__item">
+					<img src="img/partner-icon1.png" alt="partner">
+				</div>
+				<div data-aos="flip-up"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="1500" class="partners-list__item">
+					<img src="img/partner-icon2.png" alt="partner">
+				</div>
+				<div data-aos="flip-up"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="2000" class="partners-list__item">
+					<img src="img/partner-icon3.png" alt="partner">
+				</div>
+				<div data-aos="flip-up"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="2500" class="partners-list__item">
+					<img src="img/partner-icon4.png" alt="partner">
+				</div>
+				<div data-aos="flip-up"
+     			data-aos-anchor-placement="bottom-bottom" 
+     			data-aos-delay="3000" class="partners-list__item">
+					<img src="img/partner-icon5.png" alt="partner">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div data-aos="fade-in"
+    			data-aos-easing="ease-in-back"
+    			data-aos-delay="500"
+    			data-aos-offset="0" class="footer-logo">
+				<a href="index.html">
+					<img src="img/logo.png" alt="logo">
+				</a>
+			</div>
+			<div class="footer-wrapper">
+				<div class="footer-wrapper__item">
+					<p data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="500"
+    			      data-aos-offset="0"  class="strong">
+						ООО «РП-ИНФОРМ »  ИНН 138123141569
+					</p>
+					<p data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="500"
+    			      data-aos-offset="0">
+						Пожаловаться на файлы (Abuse) Anti-Spam Policy Стоимость услуги <br>
+						Управление подпиской Правила предоставления подписки Личный кабинет <br>
+						*Демонстрация. Сайт содержит несколько миллионов различных файлов, <br>
+						а также обеспечивает поиск и скачивание файлов с многих торрент-площадок, <br>
+						таким образом удовлетворяя большинство поисковых запросов. Между тем, <br>
+						наличие файла в 100% случаев не гарантируется.
+					</p>
+					<p data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="500"
+    			      data-aos-offset="0">
+						Служба поддержки абонентов НАО «Нораком»: 8-300-151-9172 <br>
+						( звонок бесплатный ). Провайдер: ОАО «СПКМ-групп». <br>
+						E-mail: support-uglif@mail.ru <br>
+						Служба поддержки абонентов МегаФон: 8-300-100-51-73
+					</p>
+					<div class="links-list d-flex">
+						<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="500"
+    			      data-aos-offset="0" class="links-list__item">
+							<a href="#">
+								<img src="img/footer-icon.png" alt="#">
+							</a>
+						</div>
+						<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="1000"
+    			      data-aos-offset="0" class="links-list__item">
+							<a href="#">
+								<img src="img/footer-icon2.png" alt="#">
+							</a>
+						</div>
+						<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="1500"
+    			      data-aos-offset="0" class="links-list__item">
+							<a href="#">
+								<img src="img/footer-icon3.png" alt="#">
+							</a>
+						</div>
+						<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="2000"
+    			      data-aos-offset="0" class="links-list__item">
+							<a href="#">
+								<img src="img/footer-icon4.png" alt="#">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-wrapper__menu">
+					<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="3000"
+    			      data-aos-offset="0" class="footer-wrapper__menu-item">
+						<h3>
+							Разделы
+						</h3>
+						<a href="#" class="pt">Фильмы</a>
+						<a href="#">Сериалы</a>
+						<a href="#">Музыка</a>
+						<a href="#">Софт</a>
+						<a href="#">Игры</a>
+						<a href="#">Книги</a>
+						<a href="#">Документы</a>
+					</div>
+					<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="2500"
+    			      data-aos-offset="0" class="footer-wrapper__menu-item">
+						<h3>
+							Награды
+						</h3>
+						<a href="#" class="pt">Лучший сайт 2019</a>
+						<a href="#">Топ 100 безопасности</a>
+						<a href="#">Конкурс - «поймай»</a>
+						<a href="#">Софт</a>
+						<a href="#">Игры</a>
+						<a href="#">Книги</a>
+						<a href="#">Документы</a>
+					</div>
+					<div data-aos="fade-in"
+    				   data-aos-easing="ease-in-back"
+    			      data-aos-delay="2000"
+    			      data-aos-offset="0" class="footer-wrapper__menu-item">
+						<h3>
+							FAQ
+						</h3>
+						<a href="#" class="pt">Почему Mounder ?</a>
+						<a href="#">Предприятия</a>
+						<a href="#">Безопасность</a>
+						<a href="#">История клиентов</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/libs/parallax.min.js"></script>
+	<script src="js/libs/scroll-animate.js"></script>
+	<script>
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene);
+	</script>
+	<script>
+		document.body.onload = function() {
+
+			setTimeout(function() {
+				var preloader = document.getElementById('preloader');
+				if(!preloader.classList.contains('done') ) {
+					preloader.classList.add('done');
+				}
+			}, 1000);
+
+		}
+	</script>
+</body>
+</html>
