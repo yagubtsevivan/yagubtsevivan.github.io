@@ -1,0 +1,13 @@
+@font-face {
+ font-family: "CodeBlack-900";
+ src: url("../fonts/Code-Pro-Black-LC.woff") format("woff"),
+      url("../fonts/Code-Pro-Black-LC.ttf") format("ttf"),
+      url("../fonts/Code-Pro-Black-LC.eot") format("eot");
+}
+
+@font-face {
+ font-family: "CodeBlack-600";
+ src: url("../fonts/Code-Pro-Bold-LC.ttf") format("woff"),
+      url("../fonts/Code-Pro-Bold-LC.ttf") format("ttf"),
+      url("../fonts/Code-Pro-Bold-LC.eot") format("eot");
+}
