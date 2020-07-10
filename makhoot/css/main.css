@@ -577,7 +577,7 @@ content {
 }
 .btn-search img {
   position: absolute;
-  left: 42.5%;
+  left: 40px;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
