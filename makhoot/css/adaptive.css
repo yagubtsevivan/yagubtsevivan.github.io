@@ -82,6 +82,9 @@
   .btn-search-wrapper {
     width: 100%;
   }
+  .tarifs-list__item {
+    border: 1px solid #d0cece;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
