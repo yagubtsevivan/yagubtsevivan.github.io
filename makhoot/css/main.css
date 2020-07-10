@@ -3,6 +3,9 @@
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   overflow-y: scroll;
